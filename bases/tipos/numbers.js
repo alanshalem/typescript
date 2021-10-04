@@ -2,7 +2,7 @@
 (function () {
     var avengers = 10;
     console.log(avengers);
-    var villians = 20;
+    var villians = 20; //si no declaro el tipo typescript me lo infiere, pero me da error
     if (avengers < villians) {
         console.log('Estamos en problemas');
     }
