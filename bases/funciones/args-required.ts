@@ -11,5 +11,9 @@
 
 	const name = fullName('Tony', 'Stark');
 
+	let noName: any;
+
+	const name2 = fullName(noName, 'Perez');
+
 	console.log(name);
 })();

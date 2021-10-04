@@ -7,5 +7,7 @@
         return firstName + " " + lastName;
     };
     var name = fullName('Tony', 'Stark');
+    var noName;
+    var name2 = fullName(noName, 'Perez');
     console.log(name);
 })();
