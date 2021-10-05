@@ -4,10 +4,10 @@
         if (!firstName) {
             throw new Error('Nombre requerido');
         }
-        return firstName + " " + lastName;
+        return firstName + " " + (lastName || '---');
     };
-    var name = fullName('Tony', 'Stark');
-    var noName;
+    var name = fullName('Tony');
+    // let noName: any;
     // const name2 = fullName(noName, 'Perez');
     console.log(name);
     // console.log(name2);

@@ -1,17 +1,17 @@
 (() => {
 	const fullName = (
 		firstName: string,
-		lastName: string | boolean
+		lastName?: string | boolean
 	): string => {
 		if (!firstName) {
 			throw new Error('Nombre requerido');
 		}
-		return `${firstName} ${lastName}`;
+		return `${firstName} ${lastName || '---'}`;
 	};
 
-	const name = fullName('Tony', 'Stark');
+	const name = fullName('Tony');
 
-	let noName: any;
+	// let noName: any;
 
 	// const name2 = fullName(noName, 'Perez');
 
