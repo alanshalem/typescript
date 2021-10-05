@@ -8,7 +8,6 @@
     };
     var name = fullName('Tony', 'Stark');
     var noName;
-    // const name2 = fullName(noName, 'Perez');
     console.log(name);
-    // console.log(name2);
 })();
+//# sourceMappingURL=args-required.js.map

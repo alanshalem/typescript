@@ -1,6 +1,5 @@
 "use strict";
 (function () {
-    // const numbers: (string | number)[];
     var numbers = [
         1,
         2,
@@ -23,3 +22,4 @@
     numbers.push('13');
     console.log(numbers);
 })();
+//# sourceMappingURL=arrays.js.map

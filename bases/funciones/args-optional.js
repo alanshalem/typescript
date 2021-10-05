@@ -7,8 +7,6 @@
         return firstName + " " + (lastName || '---');
     };
     var name = fullName('Tony');
-    // let noName: any;
-    // const name2 = fullName(noName, 'Perez');
     console.log(name);
-    // console.log(name2);
 })();
+//# sourceMappingURL=args-optional.js.map

@@ -1,7 +1,6 @@
 "use strict";
 (function () {
     var avenger = 123;
-    // const exists; //Las declaraciones "const" deben inicializarse
     var exists;
     var power;
     avenger = 'Dr. Strange';
@@ -11,3 +10,4 @@
     console.log(exists);
     console.log(power);
 })();
+//# sourceMappingURL=any.js.map

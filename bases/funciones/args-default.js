@@ -13,3 +13,4 @@
     console.log(name_lower);
     console.log(name_upper);
 })();
+//# sourceMappingURL=args-default.js.map
