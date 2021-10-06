@@ -1,6 +1,6 @@
 "use strict";
-(function () {
-    var numbers = [
+(() => {
+    const numbers = [
         1,
         2,
         3,
@@ -13,8 +13,8 @@
         10,
         false,
     ];
-    var villian = ['Omega Rojo', 'Dorammu', 'Duende Verde'];
-    villian.forEach(function (v) {
+    const villian = ['Omega Rojo', 'Dorammu', 'Duende Verde'];
+    villian.forEach((v) => {
         console.log(v.toUpperCase());
     });
     numbers.push(11);

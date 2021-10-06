@@ -1,8 +1,8 @@
 "use strict";
-(function () {
-    var avengers = 10;
+(() => {
+    let avengers = 10;
     console.log(avengers);
-    var villians = 20;
+    const villians = 20;
     if (avengers < villians) {
         console.log('Estamos en problemas');
     }
@@ -10,9 +10,9 @@
         console.log('Nos salvamos');
     }
     avengers = 123;
-    console.log({ avengers: avengers });
+    console.log({ avengers });
     avengers = Number('55');
-    console.log({ avengers: avengers });
+    console.log({ avengers });
     avengers = Number('55A');
 })();
 //# sourceMappingURL=numbers.js.map

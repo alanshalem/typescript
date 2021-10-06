@@ -1,12 +1,12 @@
 "use strict";
-(function () {
+(() => {
     function callBatman() {
         return;
     }
-    var callSuperman = function () {
+    const callSuperman = () => {
         return;
     };
-    var a = callBatman();
+    const a = callBatman();
     console.log(a);
 })();
 //# sourceMappingURL=void.js.map

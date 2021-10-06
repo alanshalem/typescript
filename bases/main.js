@@ -1,34 +1,64 @@
 "use strict";
-var msg = 'Hola Mundo!!!';
-var hero = {
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+const msg = 'Hola Mundo!!!';
+const hero = {
     name: 'Ironman',
     age: 45,
 };
 console.log(msg);
 hero.age = 50;
 console.log(hero.age + 1);
-var a = 10;
-var b = 10;
+const a = 10;
+let b = 10;
 b = 3.1415;
-var c;
+let c;
 c = 'Hola Mundo';
-var n1 = 10;
-var str1 = 'Hola str1';
+const n1 = 10;
+let str1 = 'Hola str1';
 function sayHello(msg) {
     console.log(msg + ' ' + 'prueba');
     console.log(msg.length);
 }
 sayHello(str1);
-(function () {
-    var a = 10;
+(() => {
+    const a = 10;
     console.log(a);
 })();
-(function () {
-    var a = 'Alan';
+(() => {
+    const avengers = {
+        nick: 'Samuel L. Jackson',
+        ironman: 'Robert Downey Jr.',
+        vision: 'Paul Bettany',
+        activo: true,
+        poder: 2500,
+    };
+    const { poder, vision } = avengers;
+    console.log(poder.toFixed(2), vision.toUpperCase());
+    const printAvenger = (avengers) => {
+        console.log(avengers.vision);
+    };
+    const printIronman = (_a) => {
+        var { ironman } = _a, resto = __rest(_a, ["ironman"]);
+        console.log(ironman, resto);
+    };
+    printAvenger(avengers);
+})();
+(() => {
+    let a = 'Alan';
     console.log(a);
-    var NOMBRE = 'Alan';
-    var getName = function () { };
-    var heroe = {
+    const NOMBRE = 'Alan';
+    const getName = () => { };
+    const heroe = {
         a: 1,
         b: 2,
     };
@@ -37,45 +67,40 @@ sayHello(str1);
 function sumar(a, b) {
     return a + b;
 }
-var contar = function (heroes) {
+const contar = (heroes) => {
     return heroes.length;
 };
-var superheroes = ['Flash', 'Arrow', 'Superman', 'Linterna Verde'];
+const superheroes = ['Flash', 'Arrow', 'Superman', 'Linterna Verde'];
 contar(superheroes);
-var llamarBatman = function (llamar) {
-    if (llamar === void 0) { llamar = true; }
+const llamarBatman = (llamar = true) => {
     if (llamar) {
         console.log('Batiseñal Activada');
     }
 };
 llamarBatman();
-var unirheroes = function () {
-    var personas = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        personas[_i] = arguments[_i];
-    }
+const unirheroes = (...personas) => {
     return personas.join(', ');
 };
-var noHaceNada = function (numero, texto, booleano, arreglo) { };
-var noHaceNadaTampoco;
+const noHaceNada = (numero, texto, booleano, arreglo) => { };
+let noHaceNadaTampoco;
 noHaceNadaTampoco = noHaceNada;
-(function () {
-    var batimovil = {
+(() => {
+    const batimovil = {
         carroceria: 'Negra',
         modelo: '6x6',
         antibalas: true,
         pasajeros: 4,
     };
-    var bumblebee = {
+    const bumblebee = {
         carroceria: 'Amarillo con negro',
         modelo: '4x2',
         antibalas: true,
         pasajeros: 4,
-        disparar: function () {
+        disparar() {
             console.log('Disparando');
         },
     };
-    var villanos = [
+    const villanos = [
         {
             nombre: 'Lex Luthor',
             edad: 54,
@@ -92,85 +117,81 @@ noHaceNadaTampoco = noHaceNada;
             mutante: true,
         },
     ];
-    var charles = {
+    const charles = {
         poder: 'psiquico',
         estatura: 1.78,
     };
-    var apocalipsis = {
+    const apocalipsis = {
         lider: true,
         miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
     };
-    var mystique;
+    let mystique;
     mystique = charles;
     mystique = apocalipsis;
 })();
-(function () {
-    var fullName = function (firstName, upper, lastName) {
+(() => {
+    const fullName = (firstName, upper, lastName) => {
         if (upper) {
-            return (firstName + " " + (lastName || '----')).toUpperCase();
+            return `${firstName} ${lastName || '----'}`.toUpperCase();
         }
         else {
-            return firstName + " " + (lastName || '----');
+            return `${firstName} ${lastName || '----'}`;
         }
     };
-    var name_lower = fullName('Tony', false);
-    var name_upper = fullName('Tony', true);
+    const name_lower = fullName('Tony', false);
+    const name_upper = fullName('Tony', true);
     console.log(name_lower);
     console.log(name_upper);
 })();
-(function () {
-    var fullName = function (firstName, lastName) {
+(() => {
+    const fullName = (firstName, lastName) => {
         if (!firstName) {
             throw new Error('Nombre requerido');
         }
-        return firstName + " " + (lastName || '---');
+        return `${firstName} ${lastName || '---'}`;
     };
-    var name = fullName('Tony');
+    const name = fullName('Tony');
     console.log(name);
 })();
-(function () {
-    var fullName = function (firstName, lastName) {
+(() => {
+    const fullName = (firstName, lastName) => {
         if (!firstName) {
             throw new Error('Nombre requerido');
         }
-        return firstName + " " + lastName;
+        return `${firstName} ${lastName}`;
     };
-    var name = fullName('Tony', 'Stark');
-    var noName;
+    const name = fullName('Tony', 'Stark');
+    let noName;
     console.log(name);
 })();
-(function () {
-    var fullName = function (firstName) {
-        var restArgs = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            restArgs[_i - 1] = arguments[_i];
-        }
-        return firstName + " " + restArgs.join(' ');
+(() => {
+    const fullName = (firstName, ...restArgs) => {
+        return `${firstName} ${restArgs.join(' ')}`;
     };
-    var superman = fullName('Clark', 'Joseph', 'Kent');
-    console.log({ superman: superman });
+    const superman = fullName('Clark', 'Joseph', 'Kent');
+    console.log({ superman });
 })();
-(function () {
-    var addNumbers = function (a, b) { return a + b; };
-    var greet = function (name) { return "Hola " + name; };
-    var saveTheWorld = function () { return "El mundo esta salvado"; };
-    var myFunction;
+(() => {
+    const addNumbers = (a, b) => a + b;
+    const greet = (name) => `Hola ${name}`;
+    const saveTheWorld = () => `El mundo esta salvado`;
+    let myFunction;
     myFunction = saveTheWorld;
     console.log(myFunction());
 })();
-(function () {
-    var hero = 'Flash';
+(() => {
+    const hero = 'Flash';
     function returnName() {
         return hero;
     }
-    var activateBatiSignal = function () {
+    const activateBatiSignal = () => {
         return 'Batiseñal Activada!';
     };
     console.log(typeof activateBatiSignal);
-    var heroName = returnName();
+    const heroName = returnName();
 })();
-(function () {
-    var flash = {
+(() => {
+    let flash = {
         name: 'Barry Allen',
         age: 24,
         powers: ['Super velocidad', 'Viajar en el tiempo'],
@@ -179,34 +200,34 @@ noHaceNadaTampoco = noHaceNada;
         name: 'Clark Kent',
         age: 60,
         powers: ['Super Fuerza'],
-        getName: function () {
+        getName() {
             return this.name;
         },
     };
     console.log(flash);
-    var superman = {
+    let superman = {
         name: 'Clark Kent',
         age: 60,
         powers: ['Super velocidad'],
     };
 })();
-(function () {
-    var flash = {
+(() => {
+    let flash = {
         name: 'Barry Allen',
         age: 24,
         powers: ['Super velocidad', 'Viajar en el tiempo'],
     };
-    var superman = {
+    let superman = {
         name: 'Clark Kent',
         age: 60,
         powers: ['Super velocidad'],
-        getName: function () {
+        getName() {
             return this.name;
         },
     };
 })();
-(function () {
-    var myCustomVariable = 'Alan';
+(() => {
+    let myCustomVariable = 'Alan';
     console.log(typeof myCustomVariable);
     console.log(myCustomVariable);
     myCustomVariable = 20;
@@ -216,10 +237,10 @@ noHaceNadaTampoco = noHaceNada;
     console.log(typeof myCustomVariable);
     console.log(myCustomVariable);
 })();
-(function () {
-    var avenger = 123;
-    var exists;
-    var power;
+(() => {
+    let avenger = 123;
+    let exists;
+    let power;
     avenger = 'Dr. Strange';
     console.log(avenger.charAt(0));
     avenger = 150.23256415;
@@ -227,8 +248,8 @@ noHaceNadaTampoco = noHaceNada;
     console.log(exists);
     console.log(power);
 })();
-(function () {
-    var numbers = [
+(() => {
+    const numbers = [
         1,
         2,
         3,
@@ -241,8 +262,8 @@ noHaceNadaTampoco = noHaceNada;
         10,
         false,
     ];
-    var villian = ['Omega Rojo', 'Dorammu', 'Duende Verde'];
-    villian.forEach(function (v) {
+    const villian = ['Omega Rojo', 'Dorammu', 'Duende Verde'];
+    villian.forEach((v) => {
         console.log(v.toUpperCase());
     });
     numbers.push(11);
@@ -250,27 +271,27 @@ noHaceNadaTampoco = noHaceNada;
     numbers.push('13');
     console.log(numbers);
 })();
-(function () {
-    var isSuperman = true;
-    var isBatman = false;
+(() => {
+    let isSuperman = true;
+    let isBatman = false;
     console.log(isSuperman);
-    console.log({ isBatman: isBatman });
+    console.log({ isBatman });
     isSuperman = true || false;
     isSuperman = isBatman ? true : false;
 })();
-(function () {
-    var AudioLevel;
+(() => {
+    let AudioLevel;
     (function (AudioLevel) {
         AudioLevel[AudioLevel["min"] = 0] = "min";
         AudioLevel[AudioLevel["medium"] = 1] = "medium";
         AudioLevel[AudioLevel["max"] = 2] = "max";
     })(AudioLevel || (AudioLevel = {}));
-    var currentAudio = AudioLevel.medium;
+    let currentAudio = AudioLevel.medium;
     console.log(currentAudio);
     console.log(AudioLevel);
 })();
-(function () {
-    var error = function (message) {
+(() => {
+    const error = (message) => {
         if (false) {
             throw new Error(message);
         }
@@ -278,14 +299,14 @@ noHaceNadaTampoco = noHaceNada;
     };
     error('Auxilio');
 })();
-(function () {
-    var isActive = undefined;
+(() => {
+    let isActive = undefined;
     console.log(isActive);
 })();
-(function () {
-    var avengers = 10;
+(() => {
+    let avengers = 10;
     console.log(avengers);
-    var villians = 20;
+    const villians = 20;
     if (avengers < villians) {
         console.log('Estamos en problemas');
     }
@@ -293,34 +314,34 @@ noHaceNadaTampoco = noHaceNada;
         console.log('Nos salvamos');
     }
     avengers = 123;
-    console.log({ avengers: avengers });
+    console.log({ avengers });
     avengers = Number('55');
-    console.log({ avengers: avengers });
+    console.log({ avengers });
     avengers = Number('55A');
 })();
-(function () {
+(() => {
     var _a;
-    var batman = 'Batman';
-    var linternaVerde = "Linterna's Verde";
-    var volcanNegro = "Heroe: Volcan Negro";
-    var abc = 123;
-    console.log(batman.toUpperCase() + ", " + abc.toString());
-    console.log("" + (((_a = batman[10]) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || 'No esta presente'));
+    const batman = 'Batman';
+    const linternaVerde = "Linterna's Verde";
+    const volcanNegro = `Heroe: Volcan Negro`;
+    const abc = 123;
+    console.log(`${batman.toUpperCase()}, ${abc.toString()}`);
+    console.log(`${((_a = batman[10]) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || 'No esta presente'}`);
 })();
-(function () {
-    var hero = ['Dr Strange', 100];
-    var trio = ['String', 10, true];
+(() => {
+    const hero = ['Dr Strange', 100];
+    const trio = ['String', 10, true];
     console.log(hero);
     console.log(trio);
 })();
-(function () {
+(() => {
     function callBatman() {
         return;
     }
-    var callSuperman = function () {
+    const callSuperman = () => {
         return;
     };
-    var a = callBatman();
+    const a = callBatman();
     console.log(a);
 })();
 //# sourceMappingURL=main.js.map

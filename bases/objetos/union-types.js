@@ -1,6 +1,6 @@
 "use strict";
-(function () {
-    var myCustomVariable = 'Alan';
+(() => {
+    let myCustomVariable = 'Alan';
     console.log(typeof myCustomVariable);
     console.log(myCustomVariable);
     myCustomVariable = 20;

@@ -1,9 +1,9 @@
 "use strict";
-(function () {
-    var addNumbers = function (a, b) { return a + b; };
-    var greet = function (name) { return "Hola " + name; };
-    var saveTheWorld = function () { return "El mundo esta salvado"; };
-    var myFunction;
+(() => {
+    const addNumbers = (a, b) => a + b;
+    const greet = (name) => `Hola ${name}`;
+    const saveTheWorld = () => `El mundo esta salvado`;
+    let myFunction;
     myFunction = saveTheWorld;
     console.log(myFunction());
 })();

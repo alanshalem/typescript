@@ -1,15 +1,15 @@
 "use strict";
-(function () {
-    var fullName = function (firstName, upper, lastName) {
+(() => {
+    const fullName = (firstName, upper, lastName) => {
         if (upper) {
-            return (firstName + " " + (lastName || '----')).toUpperCase();
+            return `${firstName} ${lastName || '----'}`.toUpperCase();
         }
         else {
-            return firstName + " " + (lastName || '----');
+            return `${firstName} ${lastName || '----'}`;
         }
     };
-    var name_lower = fullName('Tony', false);
-    var name_upper = fullName('Tony', true);
+    const name_lower = fullName('Tony', false);
+    const name_upper = fullName('Tony', true);
     console.log(name_lower);
     console.log(name_upper);
 })();

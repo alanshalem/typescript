@@ -1,6 +1,6 @@
 "use strict";
-(function () {
-    var flash = {
+(() => {
+    let flash = {
         name: 'Barry Allen',
         age: 24,
         powers: ['Super velocidad', 'Viajar en el tiempo'],
@@ -9,12 +9,12 @@
         name: 'Clark Kent',
         age: 60,
         powers: ['Super Fuerza'],
-        getName: function () {
+        getName() {
             return this.name;
         },
     };
     console.log(flash);
-    var superman = {
+    let superman = {
         name: 'Clark Kent',
         age: 60,
         powers: ['Super velocidad'],
