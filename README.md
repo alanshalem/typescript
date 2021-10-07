@@ -1,4 +1,4 @@
-# Notas - Curso de Fundamentos de TypeScript
+# NOTAS - CURSO DE TYPESCRIPT
 
 # **Que es typescript?**
 
